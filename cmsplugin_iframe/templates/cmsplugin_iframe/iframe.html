@@ -1,3 +1,3 @@
-<h3>{{ iframe.title }}</h3>
-<iframe src="{{ iframe.url }}" frameborder="0" style="width:{{ iframe_width }}px; height:{{ iframe_height }}px;">
+{% if iframe.title %}<h3>{{ iframe.title }}</h3>{% endif %}
+<iframe src="{{ iframe.url }}" frameborder="0" style="{% if iframe.width %}width:{{ iframe_width }}px; {% endif %}height:{{ iframe_height }}px;">
 </iframe>
